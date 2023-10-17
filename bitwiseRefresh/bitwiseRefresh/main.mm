@@ -9,14 +9,23 @@
 #import <Foundation/Foundation.h>
 
 // C++ includes
-#include <iostream>
+#include "BitwiseOps.hpp"
 
 int main(int argc, const char * argv[]) {
   std::cout << "Hello world from Objective-C++" << std::endl;
+  std::cout << std::endl;
+  
+  BitwiseOps aBitwiseOpsObject;
+  
+  aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("012");
+  
+  aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0xfe");
+  
+  aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0b1001");
+  
   
   @autoreleasepool {
-      // insert code here...
-      NSLog(@"Hello, World!");
+      NSLog(@"Hello, World! from Objective-C!!");
   }
   return 0;
 }
