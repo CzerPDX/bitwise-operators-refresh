@@ -17,11 +17,10 @@ int main(int argc, const char * argv[]) {
   
   BitwiseOps aBitwiseOpsObject;
   
-  aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("012");
-  
-  aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0xfe");
-  
-  aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0b1001");
+  // Convert some non-decimal numbers to their decimal counterparts
+  std::cout << "012 -> " << aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("012") << std::endl;
+  std::cout << "0xfe -> " << aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0xfe") << std::endl;
+  std::cout << "0b1001 -> " << aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0b1001") << std::endl;
   
   
   @autoreleasepool {

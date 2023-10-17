@@ -18,9 +18,8 @@ public:
   
 private:
   // Used to convert to decimal from binary, octal, and hex
-  int binaryToDecimal(std::string binaryNum);
-  int octalToDecimal(std::string octalNum);
-  int hexToDecimal(std::string hexNum);
+  int decimalConversion(std::string numToConvert, int base);
+  std::string prepareNumForConversion(std::string numToPrepare, int base);
 };
 
 #endif /* BITWISEOPS_H */
