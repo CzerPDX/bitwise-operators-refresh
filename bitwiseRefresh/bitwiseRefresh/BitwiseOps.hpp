@@ -16,6 +16,8 @@ public:
   // Figure out if the incoming string represents a binary, hex, or octal number and then convert it to its decimal value.
   int convertBinaryOctalOrHexToDecimal(std::string numToConvert);
   
+  std::string convertDecimalToBinary(int numToConvert);
+  
 private:
   // Used to convert to decimal from binary, octal, and hex
   int decimalConversion(std::string numToConvert, int base);

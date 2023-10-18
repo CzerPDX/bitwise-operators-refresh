@@ -10,6 +10,8 @@
 
 #include "BitwiseOps.hpp"
 
+// Public
+
 // Returns decimal representation of binary, hex, and octal numbers
 int BitwiseOps::convertBinaryOctalOrHexToDecimal(std::string numToConvert) {
   /*
@@ -44,6 +46,34 @@ int BitwiseOps::convertBinaryOctalOrHexToDecimal(std::string numToConvert) {
   
   return retNum;
 }
+
+std::string BitwiseOps::convertDecimalToBinary(int numToConvert) {
+  // 2^7 = 128
+  // 2^6 = 64
+  // 2^5 = 32
+  // 2^4 = 16
+  // 2^3 = 8
+  // 2^2 = 4
+  // 2^1 = 2
+  // 2^0 = 1
+  std::string binaryToReturn = "0b";
+
+  // For simplicity only working with 8bit numbers right now
+  for (int i = 7; i >= 0; i--) {
+    int currAmt = pow(2, i);
+    if (numToConvert >= currAmt) {
+      numToConvert -= currAmt;
+      binaryToReturn += "1";
+    } else {
+      binaryToReturn += "0";
+    }
+  }
+  return binaryToReturn;
+}
+
+
+
+// Private
 
 // Remove the part of the string that denotes the type of base
 std::string BitwiseOps::prepareNumForConversion(std::string numToPrepare, int base) {

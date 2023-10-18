@@ -22,6 +22,9 @@ int main(int argc, const char * argv[]) {
   std::cout << "0xfe -> " << aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0xfe") << std::endl;
   std::cout << "0b1001 -> " << aBitwiseOpsObject.convertBinaryOctalOrHexToDecimal("0b1001") << std::endl;
   
+  // Convert some decimal to binary
+  std::cout << "8 = " << aBitwiseOpsObject.convertDecimalToBinary(8) << std::endl;
+  
   
   @autoreleasepool {
       NSLog(@"Hello, World! from Objective-C!!");
